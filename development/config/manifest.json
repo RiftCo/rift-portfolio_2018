@@ -1,0 +1,20 @@
+{
+  "lang": "en",
+  "background_color": "#ffffff",
+  "theme_color": "blue",
+  "name": "Company &middot; Title",
+  "short_name": "OllieJT",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "img/icon-apple.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logo.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

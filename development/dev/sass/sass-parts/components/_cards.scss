@@ -1,0 +1,104 @@
+@import '../_framework/variables';
+
+// Mixins
+@import '../_framework/mixins/animation';
+
+.card-list{
+	li{
+		grid-column: span 4;
+	}
+}
+
+.card{
+}
+
+.card-project{
+	padding: $space;
+	border-radius: .6rem;
+	background: $background;
+	box-shadow: 0 6px 12px 0 rgba(40,30,80,0.09), 0 6px 24px 0 rgba(29,8,82,0.06);
+	transition: all $transition-easeOutCirc 1s;
+	p,h6{
+		margin-bottom: 0;
+		padding: 0 $space;
+	}
+	p{
+		color: transparentize($background-invert, .1);
+	}
+	h6{
+		opacity: .84
+	}
+	&:hover{
+		box-shadow: 0 6px 12px 0 rgba(40,30,80,0.12), 0 12px 24px 0 rgba(29,8,82,0.24);
+		.card-thumbnail{
+			img{
+				transform: scale(1) translateY(0) rotateZ(0)
+			}
+			.card-project-open{
+				opacity: 1;
+				transform: translateY(0)
+			}
+		}
+	}
+}
+
+.card-thumbnail{
+	position: relative;
+	font-size: 0;
+	line-height: 0;
+	border-radius: 1.2rem;
+	overflow: hidden;
+	margin-bottom: $space;
+	.card-project-open{
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		z-index: 20;
+		background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+		opacity: 0;
+		transform: translateY(100%);
+		transition: all $transition-easeOutCirc .4s;
+		h6{
+			color: white;
+			padding: $space;
+		}
+	}
+	img{
+		z-index: 5;
+		width: auto;
+		max-width: 100%;
+		height: auto;
+		transition: all $transition-easeOutCirc 2.4s;
+		transform: scale(1.12) translateY(3px) rotateZ(1deg)
+	}
+}
+
+
+.project-participant-list{
+	padding: $space;
+	padding-bottom: 0;
+	font-size: 0;
+	line-height: 0;
+	li{
+		margin-bottom: 0;
+		margin-right: $space;
+	}
+	
+}
+.project-participant{
+	display: inline-block;
+	img{
+		border-radius: 100%;
+	}
+}
+
+
+
+
+
+//@media only screen and (max-width: $desktop) {}
+//@media only screen and (max-width: $tablet) {}
+//@media only screen and (max-width: $mobile) {}

@@ -1,0 +1,19 @@
+// Variables
+@import '../variables';
+
+
+// Overlays
+@mixin gradient ($gradient-start, $gradient-end, $gradient-backup) {
+	background: $gradient-backup;
+	background: linear-gradient(to top, $gradient-start 0%, $gradient-end 100%);
+}
+
+@mixin overlay {
+	background: transparentize($darkest,.3);
+	background: linear-gradient(to top, transparentize($darkest,.06) 0%, transparentize($darkest,1) 100%);
+}
+
+@mixin gradient-brand {
+	background: $brand;
+	background: linear-gradient(to top right, $brand 0%, $brand-alt 100%);
+}

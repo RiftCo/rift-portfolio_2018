@@ -1,0 +1,41 @@
+{
+  "name": "quickstart",
+  "version": "0.1.0",
+  "description": "Project init built by OllieJT",
+  "main": "/gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-connect": "^5.5.0",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-series": "^1.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-twig": "^1.2.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "path": "^0.12.7",
+    "pretty-error": "^2.1.1"
+  },
+  "scripts": {
+    "gui": "sudo npm-gui localhost:9000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OllieJT/quickstart.git"
+  },
+  "keywords": [],
+  "author": "Ollie Taylor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OllieJT/quickstart/issues"
+  },
+  "homepage": "https://github.com/OllieJT/quickstart#readme"
+}

@@ -1,0 +1,205 @@
+@import 'variables';
+
+
+
+// Form
+h1 {
+	font-size: 				4.2rem;
+	line-height: 			5.4rem;
+	font-weight: 			$font-regular;
+	margin-bottom: 		$space;
+	&.hero{
+		font-size: 				1.8rem;
+		line-height: 			3rem;
+	}
+}
+h2 {
+	font-size: 				3.6rem;
+	line-height: 			4.8rem;
+	font-weight: 			$font-regular;
+	margin-bottom: 		$space;
+}
+h3 {
+	font-size: 				3rem;
+	line-height: 			4.2rem;
+	font-weight: 			$font-medium;
+	margin-bottom: 		$space;
+}
+h4 {
+	font-size: 				2.4rem;
+	line-height: 			3.6rem;
+	font-weight: 			$font-regular;
+	margin-bottom: 		$space;
+}
+h5 {
+	font-size: 				1.8rem;
+	line-height: 			3rem;
+	font-weight: 			$font-regular;
+	margin-bottom: 		$space;
+}
+h6 {
+	font-size: 				1.2rem;
+	line-height: 			2.4rem;
+	font-weight: 			$font-medium;
+	margin-bottom: 		$space;
+	text-transform: 		uppercase;
+	letter-spacing: 		.1px;
+}
+p, li {
+	font-size: 				1.8rem;
+	line-height: 			3rem;
+	font-weight: 			$font-regular;
+	margin-bottom: 		$space;
+}
+	
+	
+	
+	
+	
+// Colour
+h1,h2,h3,h4{color: $text-colour-strong}
+h5,strong,bold,b{color: #281E50}
+h6,p,li,figcaption{
+	color: $text-colour;
+	a{
+		color: $text-colour-highlight;
+		&:hover{color: $text-colour-alt}
+	}
+}
+span.highlight,a{color: $text-colour-highlight}
+	.dark-mode{
+		h1,h2,h3,h4,h5,strong,bold,b{color: $text-colour-invert-strong}
+		h6,p,li,figcaption{
+			color: $text-colour-invert;
+			a{
+				color: $text-colour-invert-highlight;
+				&:hover{color: $text-colour-invert-alt}
+			}
+		}
+		span.highlight{color: $text-colour-invert-highlight}
+}
+
+
+
+// Spacing
+h1, h2, h3, h4, h5, h6, p{
+	&:last-child{
+		margin-bottom:0;
+	}
+}
+
+
+
+
+// Sub Styles
+a {
+	text-decoration: 		none;
+	display: 				inline-block;
+	color: 					inherit;
+}
+a:hover {color: 			inherit;}
+
+em{font-style: 			italic;}
+
+strong,b{
+	font-weight: 			$font-medium;
+	&h1,&h2,&h3,&h4,&h5,&h6{
+		font-weight: 		$font-bold;
+		color: 				$brand
+	}
+}
+hr{
+	border-color: transparentize($text-colour,.4);
+}
+
+
+
+// Images
+img{
+	display: 				inline-block;
+}
+figure{
+	display: 				inline-block;
+	width: 					100%;
+	margin: 					$space * 5 auto;
+	text-align: 			center;
+	img{
+		padding: 			0;
+		margin: 				0 auto;
+		box-sizing: 		border-box;
+		max-width: 			100%;
+		height: 				auto;
+	}
+}
+figcaption{
+	display: 				block;
+	margin: 					0 auto;
+	text-align:				center;
+	padding: 				$space * 3;
+}
+
+
+
+// Quotes
+blockquote{
+	position: 				relative;
+	margin: 					$space * 5 0;
+	padding: 				$space * 3;
+	border-style: 			solid;
+	border-width: 			1px 1px 1px 4px;
+	border-color: 			$brand;
+	border-left-color: 	$brand;
+	strong{color: 			$brand}
+}
+
+
+
+// Lists
+article,.typography{
+	ul,ol{
+		margin: 				$space;
+		ul,ol{
+			margin: 			$space-small $space;
+		}
+		li{
+			//padding: 			$space 0;
+			margin-left: 	$space;
+			margin-right: 	-$space * 2;
+			max-width: 		100%;
+		}
+		li:before{
+			float: 			left;
+			margin-right: 	$space-small;
+			opacity: 		.6;
+		}
+		h1, h2, h3, h4, h5, h6, p{
+			display: 		inline-block;
+		}
+	}
+
+	ul{
+		list-style: 		disc;
+		list-style-position: inside;
+		li{list-style-type: disc}
+		ol{
+			list-style: none;
+			li{list-style-type: none}
+		}
+	}
+
+	ol{
+		counter-reset: parent-counter;
+		li{counter-increment: parent-counter}
+		li:before{content: counter(parent-counter)"."}
+		ol{
+			counter-reset: child-counter;
+			li{counter-increment: child-counter}
+			li:before{content: counter(child-counter)"."}
+		}
+		ul{
+			counter-reset: no-counter;
+			li{counter-increment: no-counter}
+			li:before{content: none}
+		}
+	}
+}

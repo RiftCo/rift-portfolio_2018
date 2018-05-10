@@ -1,0 +1,50 @@
+@import '../_framework/variables';
+
+// Mixins
+@import '../_framework/mixins/animation';
+
+	
+
+nav{
+	position: relative;
+	z-index: 10;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-column-gap: $space;
+	width: 100%;
+	max-width: $body-max;
+	padding: 3rem $space;
+	margin: 0 auto;
+	&::before, &::after{
+		display: none;
+	}
+}
+
+
+#menu{
+	li{
+		list-style: none;
+		display: inline-block;
+		font-size: 1.4rem;
+		letter-spacing: .06rem;
+		text-transform: uppercase;
+		font-weight: $font-medium;
+		line-height: 24px;
+		margin-bottom: 0;
+		a{
+			color: $text-colour-invert;
+			padding: 0 $space;
+			opacity: .9;
+			&:hover,&.active{
+				color: $text-colour-invert-strong;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+
+
+//@media only screen and (max-width: $desktop) {}
+//@media only screen and (max-width: $tablet) {}
+//@media only screen and (max-width: $mobile) {}

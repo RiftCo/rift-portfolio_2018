@@ -1,0 +1,63 @@
+@import '../_framework/variables';
+
+// Mixins
+@import '../_framework/mixins/animation';
+
+
+
+header{
+	position: relative;
+	margin-bottom: $space-big;
+	overflow: hidden;
+	perspective: 1px;
+	.container-edge{
+		bottom: 0;
+	}
+	.background-image{
+		background-size: cover;
+		background-attachment: scroll;
+	}
+}
+
+.colour-bar{
+	display: block;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: auto;
+	width: 100%;
+	height: .6rem;
+	&::after{
+		display: block;
+		content: "";
+		background-color: $brand;
+		height: 100%;
+		width: calc(100% - 2.4rem);
+		max-width: $body-max;
+		margin: 0 auto;
+		border-radius: 0 0 1.2rem 1.2rem
+	}
+}
+
+.hero-title{
+	width: 100%;
+	position: relative;
+	z-index: 10;
+	max-width: $body-max;
+	margin: 0 auto;
+	padding: 9rem $space 14rem $space;
+	text-align: center;
+	//h1,h2,h3,h4,h5,h6,p{margin-bottom: 0;}
+}
+
+
+
+
+
+
+
+//@media only screen and (max-width: $desktop) {}
+//@media only screen and (max-width: $tablet) {}
+//@media only screen and (max-width: $mobile) {}

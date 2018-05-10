@@ -1,0 +1,58 @@
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+<title>
+  {% if page == "home" %}
+    {{ site.title }} &middot; {{ site.tagline }}
+  {% elseif title is defined %}
+    {{ title }} &middot; {{ site.title }}
+  {% else %}
+    {{ site.title }} &middot; {{ site.tagline }}
+  {% endif %}
+</title>
+
+<!-- favicon -->
+<link rel="shortcut icon" href="{{ url }}{{ directory }}/src/favicon-32.png"> <!-- 32px -->
+<link rel="apple-touch-icon" href="{{ url }}{{ directory }}/src/favicon-180.png" sizes="180x180"><!-- 180px -->
+<link rel="mask-icon" href="{{ url }}{{ directory }}/src/favicon-256.png" color="#{{ site.colour }}"> <!-- 256px -->
+<meta name="msapplication-TileColor" content="#{{ site.colour }}">
+<meta name="theme-color" content="#{{ site.colour }}">
+
+<!-- seo-meta-global -->
+<meta name="author" content="{{ contact.author }}">
+<link rel='me' type='text/html' href='http://twitter.com/{{ contact.twitter }}'>
+<link rel="canonical" href="{{ url }}{{ directory }}">
+
+<!-- seo-meta-global - opengraph -->
+<meta property="og:type" content="{{ content_type }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:locale" content="en"> <!-- en_US -->
+<meta property="article:author" content="{{ contact.author }}">
+
+<!-- seo-meta-global - twitter -->
+<meta name="twitter:site" content="{{ contact.twitter }}" />
+<meta name="twitter:card" content="summary" />
+
+<!-- seo-meta-this-page -->
+<meta property="og:title" content="{% if title is defined %}{{ title }} - {% endif %}{{ site.title }}">
+<meta name="twitter:title" content="{% if title is defined %}{{ title }} - {% endif %}{{ site.title }}" />
+
+<meta name="description" content="{% if description is defined %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:description" content="{% if description is defined %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+
+<meta property="og:url" content="{{ url }}{{ directory }}{{ slug }}">
+<meta name="twitter:url" content="{{ url }}{{ directory }}{{ slug }}"/>
+
+<meta property="og:image" content="{% if thumbnail is defined %}{{ url }}{{ directory }}{{ thumbnail }}{% else %}{{ url }}{{ directory }}src/thumbnail.jpg{% endif %}">
+<meta name="twitter:image" content="{% if thumbnail is defined %}{{ url }}{{ directory }}{{ thumbnail }}{% else %}{{ url }}{{ directory }}src/thumbnail.jpg{% endif %}" />
+
+<meta name="keywords" content="{% for value in tags %}{{ value }}, {% endfor %}">
+
+<!-- global imports -->
+<meta name="robots" content="robots.txt">
+<link rel="author" href="humans.txt">
+<link rel="manifest" href="manifest.json">
+
+

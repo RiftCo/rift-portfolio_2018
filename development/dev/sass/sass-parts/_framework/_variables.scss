@@ -1,0 +1,65 @@
+// Colours
+	
+$brand: 							#9966FF;
+
+$system-error:					#f73163;
+$system-info:					#80aaff;
+$system-alert:					#ffd75c;
+$system-confirm:				#41d9a6;
+	
+$link-before: 					darken($brand, 10);
+$link-after: 					lighten($brand, 10);
+
+$text-colour:  					rgba(40,30,80,.72);
+$text-colour-strong:  			rgba(30,14,14,1);
+$text-colour-highlight:  		rgba(153,102,255,.42);
+$text-colour-alt:  				rgba(153,102,255,.42);
+
+$text-colour-invert: 			rgba(225,215,245,.9);
+$text-colour-invert-strong:	rgba(255,255,255,1);
+$text-colour-invert-highlight:rgba(153,102,255,1);
+$text-colour-invert-alt:		rgba(153,102,255,1);
+
+$background: 					white;
+$background-invert: 			#1A171F;
+
+
+
+
+// Typography
+		
+$font-family: 					"Rubik";
+
+$font-size:						1.8rem;
+
+$font-regular: 				400;
+$font-medium: 					500;
+$font-bold: 					700;
+
+
+
+
+// Measurements
+	
+$space:							1.2rem;
+$space-big:						3.6rem;
+$space-small:					.6rem;
+	
+$screen-min: 					auto;
+$screen-max: 					auto;
+
+$body-min:						auto;
+$body-max:						852px;
+	
+$desktop:						1000px;
+$tablet:							1000px;
+$mobile:							1000px;
+	
+	
+	
+	
+// Animation
+	
+$transition-easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+$transition-easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+//$transition-easeInOutCirc: cubic-bezierr(0.785, 0.135, 0.15, 0.86);

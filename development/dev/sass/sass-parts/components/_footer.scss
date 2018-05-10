@@ -1,0 +1,58 @@
+@import '../_framework/variables';
+
+// Mixins
+@import '../_framework/mixins/animation';
+
+
+footer{
+	position: relative;
+	padding: 9rem 0;
+	margin-top: $space-big;
+}
+
+#footer-text{
+	grid-column: span 8
+}
+#legal{
+	margin-top: $space-big;
+	opacity: .6 ;
+}
+
+#footer-links{
+	grid-column: span 4
+}
+.footer-button{
+	display: grid;
+	width: 100%;
+	background-color: transparent;
+	border: 2px solid transparentize($text-colour-invert, .8);
+	margin-bottom: $space;
+	padding: $space;
+	border-radius: .6rem;
+	grid-template-columns: 1fr auto auto 1fr;
+	grid-template-areas: ". icon text .";
+	grid-gap: $space-small;
+	
+	h1,h2,h3,h4,h5,h6,p{
+		grid-area: text;
+		margin-bottom: 0;
+	}
+	img{
+		grid-area: icon;
+		margin: auto 0;
+	}
+	&:hover{
+		border-color: transparent;
+		background-color: transparentize($brand, .42)
+	}
+}
+
+
+
+
+
+
+
+//@media only screen and (max-width: $desktop) {}
+//@media only screen and (max-width: $tablet) {}
+//@media only screen and (max-width: $mobile) {}

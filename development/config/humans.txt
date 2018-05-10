@@ -1,0 +1,17 @@
+/* TEAM */
+	Designer & Developer: Ollie Taylor
+	Contact: contact [at] olliejt.com
+	Twitter: @TheOllieJT
+	From: Windsor, England, UK
+
+/* THANKS */
+
+	HumansTXT
+	http://humanstxt.org
+
+
+/* SITE */
+	Last update: 03 Mar 2017
+	Language: English
+	Doctype: HTML5
+	IDE: SketchApp, Atom, Chrome Dev Tools, Cyberduck, Github

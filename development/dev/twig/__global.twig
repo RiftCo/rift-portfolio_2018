@@ -1,0 +1,27 @@
+{# Template for ALL pages #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% include 'includes/template/_head.twig' %}
+	<link rel="stylesheet" type="text/css" href="{{ url }}{{ directory }}/style.css"{# media="bogus" #}>
+</head>
+
+<body{% if page is defined %} id="page-{{ page }}"{% endif %}>
+	
+	
+	
+	
+	
+	{% block body %}{% endblock %}
+	
+	
+	
+	
+	
+	<!-- Scripts -->
+	{% block scripts %}
+	{% endblock %}
+	<!--<script src="." type="text/javascript" async ></script>-->
+	{# <link rel="stylesheet" type="text/css" href="{{ url }}{{ directory }}/style.css"> #}
+</body>
+</html>
