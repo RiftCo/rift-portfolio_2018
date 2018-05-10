@@ -22,12 +22,12 @@ nav{
 
 
 #menu{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	display: flex;
 	&::before, &::after{
 		display: none;
 	}
 	li{
+		flex-grow: 1;
 		list-style: none;
 		display: inline-block;
 		font-size: 1.4rem;
@@ -69,7 +69,7 @@ nav{
 	#menu{
 		li{
 			a{
-				padding: $space-small;
+				padding: $space $space-small;
 			}
 		}
 	}

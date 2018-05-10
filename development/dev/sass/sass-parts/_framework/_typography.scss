@@ -203,3 +203,25 @@ article,.typography{
 		}
 	}
 }
+
+
+
+
+@media only screen and (max-width: $mobile) {
+	h1 {
+		font-size: 				3rem;
+		line-height: 			4.2rem;
+	}
+	h2 {
+		font-size: 				2.7rem;
+		line-height: 			3.9rem;
+	}
+	h3 {
+		font-size: 				2.4rem;
+		line-height: 			3.6rem;
+	}
+	h4 {
+		font-size: 				2.1rem;
+		line-height: 			3.3rem;
+	}
+}

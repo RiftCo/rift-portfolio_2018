@@ -3,12 +3,17 @@
 // Mixins
 @import '../_framework/mixins/animation';
 
+
 .card-list{
+	grid-column-gap: $space;
+	grid-row-gap: $space;
 	li{
 		grid-column: span 4;
 		margin-bottom: 0;
+		line-height: 0;
 	}
 }
+
 
 .card-project{
 	padding: $space;
@@ -40,7 +45,6 @@
 		}
 	}
 }
-
 .card-thumbnail{
 	position: relative;
 	font-size: 0;
@@ -56,7 +60,7 @@
 		width: 100%;
 		text-align: center;
 		z-index: 20;
-		background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+		background: linear-gradient(to top, transparentize($background-invert, .12) 0%, transparentize($background-invert, 1) 100%);
 		opacity: 0;
 		transform: translateY(100%);
 		transition: all $transition-easeOutCirc .4s;
@@ -74,8 +78,6 @@
 		transform: scale(1.12) translateY(3px) rotateZ(1deg)
 	}
 }
-
-
 .project-participant-list{
 	padding: $space;
 	padding-bottom: 0;
@@ -98,11 +100,8 @@
 
 
 
-
-
 //@media only screen and (max-width: $desktop) {}
-@media only screen and (max-width: $tablet) {
-}
+//@media only screen and (max-width: $tablet) {}
 @media only screen and (max-width: $mobile) {
 	.card-list{
 		li{

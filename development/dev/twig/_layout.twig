@@ -2,6 +2,39 @@
 {% block body %}
 	{% include 'includes/template/_header.twig' %}
 	
+	<header class="dark-mode">
+		<div class="colour-bar"></div>
+		
+		{% include 'includes/template/_navigation.twig' %}
+		
+		{% block header %}
+			<h1>OH NO -- No content...</h1>
+		{% endblock %}
+		
+		<div class="container-edge">
+			<svg xmlns="http://www.w3.org/2000/svg" width="1658" height="36" viewBox="0 0 1658 36">
+				<path 
+					fill="#FFF" 
+					ill-rule="evenodd"
+					d="M1658,468 L0,468 C276.333333,444 552.666667,432 829,432 C1105.33333,432 1381.66667,444 1658,468 Z"
+					transform="translate(0 -432)"
+				/>
+			</svg>
+		</div>
+		
+		{% if page == "home" %}
+			<div class="background-parallax">
+				<div class="parallax-layer layer_1" style="background-image: url('./img/parallax/home-layer_1.png')"></div>
+				<div class="parallax-layer layer_2" style="background-image: url('./img/parallax/home-layer_2.png')"></div>
+				<div class="parallax-layer layer_3" style="background-image: url('./img/parallax/home-layer_3.png')"></div>
+				<div class="parallax-layer layer_4" style="background-image: url('./img/parallax/home-layer_4.png')"></div>
+			</div>
+		{% else %}
+			<div class="background-image" style="background-image: url('./{{headerImage}}')"></div>
+		{% endif %}
+		
+	</header>
+	
 	
 	{% block content %}{% endblock %}
 	
