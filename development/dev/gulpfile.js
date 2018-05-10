@@ -216,6 +216,42 @@ gulps.registerTasks({
 
 	}),
 
+	// Styles
+	"sass_prod": (function (done) {
+		setTimeout(function () {
+			console.log(util.colors.bgBlue.black.bold('\nStarting SASS...\n'))
+
+			// Source
+			gulp.src([file.style, '!**/inline.scss'])
+				.pipe(plumber())
+
+				// SASS to CSS
+				.pipe(sass({
+					outputStyle: 'nested', // nested, expanded, compact, compressed
+					sourceComments: true
+				}).on('error', sass.logError)) //compressed
+
+
+				// Prefix
+				.pipe(autoprefixer({
+					browsers: ['last 2 versions'],
+					cascade: true
+				}))
+
+				// Minify
+				.pipe(cleanCSS({compatibility: 'ie8'}))
+				//.pipe(strip())
+
+				// Export
+				.pipe(gulp.dest(path.style.build))
+
+
+			done();
+		},
+			2000);
+
+	}),
+
 	// Markup
 	"twig": (function (done) {
 		setTimeout(function () {
@@ -264,7 +300,7 @@ gulps.registerTasks({
 						},
 
 						// URL
-						url: 'http://localhost:8080/',
+						url: './',
 						directory: '',
 						tags: '["olliejt", "olliejt website design", "olliejt design"]'
 					},
@@ -514,7 +550,7 @@ gulps.registerSeries("build",
 		// CLEAN
 		"clean",
 		//CSS
-		"sass",
+		"sass_prod",
 		// HTML
 		"twig",
 		// Assets
