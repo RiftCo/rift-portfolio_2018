@@ -555,6 +555,7 @@ gulps.registerSeries("build",
 		"twig",
 		// Assets
 		"assets",
+		"images",
 		"scripts"
 	], function () {
 		console.log(util.colors.green.bold('BUILD: ') + util.colors.white.bold('COMPLETED') + util.colors.white('&') + util.colors.white.bold('COMPRESSED'))
