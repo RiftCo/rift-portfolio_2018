@@ -6,8 +6,10 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-column-gap: $space;
-	width: $body-max;
+	width: 100%;
+	max-width: $body-max;
 	margin: 0 auto;
+	padding: 0 $space;
 	&::before, &::after{
 		display: none;
 	}
@@ -93,7 +95,8 @@
 	50%{	transform: translateY(.9rem)		translateX(-.3rem)}
 	75%{	transform: translateY(.3rem)		translateX(-.9rem)}
 	100%{	transform: translateY(0) 			translateX(0)}
-	
+}
+
 @keyframes float_3 {
 	0%{	transform: translateY(0) 			translateX(0)}
 	20%{	transform: translateY(-.3rem)		translateX(-.6rem)}
@@ -109,4 +112,22 @@
 	50%{	transform: translateY(.3rem)		translateX(0)}
 	75%{	transform: translateY(.6rem)		translateX(-.6rem)}
 	100%{	transform: translateY(0) 			translateX(0)}
+}
+
+
+
+//@media only screen and (max-width: $desktop) {}
+@media only screen and (max-width: $tablet) {
+	.background-parallax{
+		.parallax-layer{
+			background-size: 150%;
+		}
+	}
+}
+@media only screen and (max-width: $mobile) {
+	.background-parallax{
+		.parallax-layer{
+			background-size: 300%;
+		}
+	}
 }

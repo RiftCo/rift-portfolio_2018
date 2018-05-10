@@ -22,6 +22,11 @@ nav{
 
 
 #menu{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	&::before, &::after{
+		display: none;
+	}
 	li{
 		list-style: none;
 		display: inline-block;
@@ -32,9 +37,11 @@ nav{
 		line-height: 24px;
 		margin-bottom: 0;
 		a{
+			width: 100%;
 			color: $text-colour-invert;
 			padding: 0 $space;
 			opacity: .9;
+			text-align: center;
 			&:hover,&.active{
 				color: $text-colour-invert-strong;
 				opacity: 1;
@@ -47,4 +54,23 @@ nav{
 
 //@media only screen and (max-width: $desktop) {}
 //@media only screen and (max-width: $tablet) {}
-//@media only screen and (max-width: $mobile) {}
+@media only screen and (max-width: $mobile) {
+	nav{
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+		grid-column-gap: 0;
+		grid-row-gap: $space;
+		text-align: center;
+		
+		padding: 3rem 0;
+	}
+	
+	
+	#menu{
+		li{
+			a{
+				padding: $space-small;
+			}
+		}
+	}
+}

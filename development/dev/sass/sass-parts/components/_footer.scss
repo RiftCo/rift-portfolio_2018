@@ -54,5 +54,37 @@ footer{
 
 
 //@media only screen and (max-width: $desktop) {}
-//@media only screen and (max-width: $tablet) {}
-//@media only screen and (max-width: $mobile) {}
+@media only screen and (max-width: $tablet) {
+	footer{
+		.container{
+			grid-template-rows: auto auto;
+		}
+		#footer-text{
+			grid-row-start: 2;
+			grid-column: span 12
+		}
+		#footer-links{
+			grid-row-start: 1;
+			grid-column: span 12;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-column-gap: $space;
+			margin-bottom: $space;
+			&::before, &::after{
+				display: none;
+			}
+			.footer-button{
+				grid-column: span 1;
+			}
+		}
+	}
+}
+@media only screen and (max-width: $mobile) {
+	footer{
+		#footer-links{
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
+			grid-column-gap: $space;
+		}
+	}
+}

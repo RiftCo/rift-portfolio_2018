@@ -6,15 +6,14 @@
 .card-list{
 	li{
 		grid-column: span 4;
+		margin-bottom: 0;
 	}
-}
-
-.card{
 }
 
 .card-project{
 	padding: $space;
 	border-radius: .6rem;
+	overflow: hidden;
 	background: $background;
 	box-shadow: 0 6px 12px 0 rgba(40,30,80,0.09), 0 6px 24px 0 rgba(29,8,82,0.06);
 	transition: all $transition-easeOutCirc 1s;
@@ -90,6 +89,8 @@
 }
 .project-participant{
 	display: inline-block;
+	line-height: 0;
+	font-size: 0;
 	img{
 		border-radius: 100%;
 	}
@@ -100,5 +101,34 @@
 
 
 //@media only screen and (max-width: $desktop) {}
-//@media only screen and (max-width: $tablet) {}
-//@media only screen and (max-width: $mobile) {}
+@media only screen and (max-width: $tablet) {
+}
+@media only screen and (max-width: $mobile) {
+	.card-list{
+		li{
+			grid-column: span 6;
+		}
+	}
+	
+	.card-project{
+		padding: $space-small;
+		//box-shadow: 0 6px 12px 0 rgba(40,30,80,0.12), 0 12px 24px 0 rgba(29,8,82,0.24);
+		p,h6{
+			padding: 0 $space-small;
+		}
+	}
+	
+	
+	.card-thumbnail{
+		border-radius: .6rem;
+		//margin-bottom: $space;
+		img{
+			transform: scale(1) translateY(0) rotateZ(0)
+		}
+	}
+	
+	.project-participant-list{
+		padding: $space-small;
+	}
+	
+}

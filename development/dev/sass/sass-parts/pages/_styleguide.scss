@@ -42,10 +42,11 @@ section#services{
 	margin-top: -4.2rem;
 	background-image: linear-gradient(-180deg, rgba(80,50,150,0.12) 0%, rgba(130,30,150,0.00) 100%);
 	.section-title{
-	position: relative;
-	z-index: 1;
+		position: relative;
+		z-index: 1;
 		background: #503D99;
-		padding: 13.2rem 0;
+		padding-top: 13.2rem;
+		padding-bottom: 13.2rem;
 		margin-bottom: -4.2rem;
 		.container-edge{
 			top: 0
@@ -63,18 +64,26 @@ section#services{
 		border-radius: .6rem;
 		&.service-special{
 			background: $background;
-			border-bottom: 3px solid transparentize($background-invert, .82)
+			border-bottom: 3px solid transparentize($background-invert, .82);
+			.service-title{
+				grid-template-columns: auto 1fr;
+				grid-template-rows: 1fr auto auto 1fr;
+				grid-template-areas:
+					"image ."
+					"image name"
+					"image skill"
+					"image ."
+				;
+			}
 		}
 	}
 	.service-title{
 		display: grid;
-		grid-template-columns: auto 1fr;
-		grid-template-rows: 1fr auto auto 1fr;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
 		grid-template-areas:
-			"image ."
-			"image name"
-			"image skill"
-			"image ."
+			"name"
+			"skill"
 		;
 		grid-column-gap: $space;
 		margin-bottom: $space;
@@ -95,5 +104,15 @@ section#services{
 	
 
 //@media only screen and (max-width: $desktop) {}
-//@media only screen and (max-width: $tablet) {}
+
+@media only screen and (max-width: $tablet) {
+	.service-list{
+		grid-template-rows: auto auto auto auto;
+		li{
+			grid-column: span 12;
+			padding: $space-big;
+		}
+	}
+}
+
 //@media only screen and (max-width: $mobile) {}
