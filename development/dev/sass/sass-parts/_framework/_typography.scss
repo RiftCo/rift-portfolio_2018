@@ -60,7 +60,7 @@ h6,p,li,figcaption{
 	}
 }
 span.highlight,a{color: $text-colour-highlight}
-.dark-mode,figure{
+.dark-mode{
 	h1,h2,h3,h4,h5,strong,bold,b{color: $text-colour-invert-strong}
 	h6,p,li,figcaption{
 		color: $text-colour-invert;
@@ -112,7 +112,7 @@ img{
 	display: 				inline-block;
 }
 figure{
-	background-color:		$background-invert;
+	//background-color:		$background-invert;
 	display: 				inline-block;
 	width: 					100%;
 	margin: 					$space-big auto;
@@ -124,11 +124,12 @@ figure{
 	img{
 		padding: 			0;
 		//margin: 				.6rem 1.2rem;
+		margin-bottom: 	.6rem;
 		box-sizing: 		border-box;
 		width: 				auto;
-		max-width: 			1920px;
+		max-width: 			$body-max;
 		height: 				auto;
-		border: 				1.2rem solid $background-invert;
+		border-radius: 	1.2rem;
 		border-top-width: 0;
 	}
 }
