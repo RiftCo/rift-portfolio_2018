@@ -41,7 +41,7 @@ header{
 	}
 }
 
-.hero-title{
+.hero-title,.project-title{
 	width: 100%;
 	position: relative;
 	z-index: 10;
@@ -49,10 +49,24 @@ header{
 	margin: 0 auto;
 	padding: 9rem $space 14rem $space;
 	text-align: center;
-	//h1,h2,h3,h4,h5,h6,p{margin-bottom: 0;}
+	//h1,h2,h3,h4,h5,h6,p{}
+	li{
+		display: inline-block;
+		margin-right: $space;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
 }
 
-
+.project-title{
+	li{
+		margin-right: $space;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
 
 
 
@@ -61,7 +75,11 @@ header{
 //@media only screen and (max-width: $desktop) {}
 //@media only screen and (max-width: $tablet) {}
 @media only screen and (max-width: $mobile) {
-	.hero-title{
+	.hero-title,.project-title{
 		padding: 0 $space $space-big  $space;
+		li{
+			display: block;
+			margin-right: 0;
+		}
 	}
 }

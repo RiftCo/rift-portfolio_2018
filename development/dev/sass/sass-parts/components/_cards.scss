@@ -9,7 +9,7 @@
 	grid-row-gap: $space;
 	li{
 		grid-column: span 4;
-		margin-bottom: 0;
+		
 		line-height: 0;
 	}
 }
@@ -23,7 +23,7 @@
 	box-shadow: 0 6px 12px 0 rgba(40,30,80,0.09), 0 6px 24px 0 rgba(29,8,82,0.06);
 	transition: all $transition-easeOutCirc 1s;
 	p,h6{
-		margin-bottom: 0;
+		
 		padding: 0 $space;
 	}
 	p{
@@ -84,7 +84,7 @@
 	font-size: 0;
 	line-height: 0;
 	li{
-		margin-bottom: 0;
+		
 		margin-right: $space;
 	}
 	

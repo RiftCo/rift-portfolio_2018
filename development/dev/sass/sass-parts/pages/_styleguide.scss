@@ -3,8 +3,9 @@
 // Mixins
 @import '../_framework/mixins/animation';
 
-// Home
 
+
+// Home
 .section-title{
 	position: relative;
 	overflow: hidden;
@@ -25,18 +26,15 @@
 	margin-bottom: $space-big;
 	h4{
 		grid-area: title;
-		margin-bottom: 0;
 	}
 	p{
 		grid-area: subtitle
 	}
 }
-
 section#projects{
 	position: relative;
 	z-index: 10;
 }
-
 section#services{
 	position: relative;
 	z-index: 1;
@@ -54,7 +52,6 @@ section#services{
 		}
 	}
 }
-
 .service-list{
 	grid-template-rows: auto auto;
 	position: relative;
@@ -94,7 +91,7 @@ section#services{
 		}
 		h1,h2,h3,h4,h5,p{
 			grid-area: name;
-			margin-bottom: 0;
+			
 		}
 		h6{
 			grid-area: skill;
@@ -103,6 +100,33 @@ section#services{
 	}
 }
 	
+
+
+// Project Page
+article{
+	h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote{
+		margin-bottom: $space !important;
+		&:last-child{margin-bottom: 0 !important}
+	}
+	blockquote p{
+		margin-bottom: 0 !important;
+		padding: 0 !important;
+	}
+}
+#project-content{
+	h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote,figcaption{
+		width: 100%;
+		max-width: $body-max;
+		margin: 0 auto;
+	}
+	h1,h2,h3,h4,h5,h6,p,ul,ol{
+		padding: 0 1.8rem;
+	}
+	iframe{
+		border-radius: 1.2rem;
+		overflow: hidden
+	}
+}
 
 //@media only screen and (max-width: $desktop) {}
 

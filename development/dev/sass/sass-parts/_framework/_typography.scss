@@ -7,7 +7,6 @@ h1 {
 	font-size: 				4.2rem;
 	line-height: 			5.4rem;
 	font-weight: 			$font-regular;
-	margin-bottom: 		$space;
 	&.hero{
 		font-size: 				1.8rem;
 		line-height: 			3rem;
@@ -17,31 +16,26 @@ h2 {
 	font-size: 				3.6rem;
 	line-height: 			4.8rem;
 	font-weight: 			$font-regular;
-	margin-bottom: 		$space;
 }
 h3 {
 	font-size: 				3rem;
 	line-height: 			4.2rem;
 	font-weight: 			$font-medium;
-	margin-bottom: 		$space;
 }
 h4 {
 	font-size: 				2.4rem;
 	line-height: 			3.6rem;
 	font-weight: 			$font-regular;
-	margin-bottom: 		$space;
 }
 h5 {
 	font-size: 				1.8rem;
 	line-height: 			3rem;
 	font-weight: 			$font-regular;
-	margin-bottom: 		$space;
 }
 h6 {
 	font-size: 				1.2rem;
 	line-height: 			2.4rem;
 	font-weight: 			$font-medium;
-	margin-bottom: 		$space;
 	text-transform: 		uppercase;
 	letter-spacing: 		.1px;
 }
@@ -49,7 +43,6 @@ p, li {
 	font-size: 				1.8rem;
 	line-height: 			3rem;
 	font-weight: 			$font-regular;
-	margin-bottom: 		$space;
 }
 	
 	
@@ -62,21 +55,21 @@ h5,strong,bold,b{color: #281E50}
 h6,p,li,figcaption{
 	color: $text-colour;
 	a{
-		color: $text-colour-highlight;
-		&:hover{color: $text-colour-alt}
+		color: $link-before;
+		&:hover{color: $link-after}
 	}
 }
 span.highlight,a{color: $text-colour-highlight}
-	.dark-mode{
-		h1,h2,h3,h4,h5,strong,bold,b{color: $text-colour-invert-strong}
-		h6,p,li,figcaption{
-			color: $text-colour-invert;
-			a{
-				color: $text-colour-invert-highlight;
-				&:hover{color: $text-colour-invert-alt}
-			}
+.dark-mode,figure{
+	h1,h2,h3,h4,h5,strong,bold,b{color: $text-colour-invert-strong}
+	h6,p,li,figcaption{
+		color: $text-colour-invert;
+		a{
+			color: $text-colour-invert-highlight;
+			&:hover{color: $text-colour-invert-alt}
 		}
-		span.highlight{color: $text-colour-invert-highlight}
+	}
+	span.highlight{color: $text-colour-invert-highlight}
 }
 
 
@@ -119,23 +112,36 @@ img{
 	display: 				inline-block;
 }
 figure{
+	background-color:		$background-invert;
 	display: 				inline-block;
 	width: 					100%;
-	margin: 					$space * 5 auto;
+	margin: 					$space-big auto;
 	text-align: 			center;
+	padding: $space 0;
+	&.media{
+		background-color:		black;
+	}
 	img{
 		padding: 			0;
-		margin: 				0 auto;
+		//margin: 				.6rem 1.2rem;
 		box-sizing: 		border-box;
-		max-width: 			100%;
+		width: 				auto;
+		max-width: 			1920px;
 		height: 				auto;
+		border: 				1.2rem solid $background-invert;
+		border-top-width: 0;
 	}
 }
 figcaption{
 	display: 				block;
 	margin: 					0 auto;
 	text-align:				center;
-	padding: 				$space * 3;
+	//padding: 				$space-big;
+	p{
+		font-size: 1.4rem;
+		line-height: 2.6rem;
+		opacity: .88;
+	}
 }
 
 
@@ -143,19 +149,21 @@ figcaption{
 // Quotes
 blockquote{
 	position: 				relative;
-	margin: 					$space * 5 0;
-	padding: 				$space * 3;
+	padding: 				$space-big;
 	border-style: 			solid;
-	border-width: 			1px 1px 1px 4px;
-	border-color: 			$brand;
-	border-left-color: 	$brand;
-	strong{color: 			$brand}
+	background-color: transparentize($brand, .7);
+	border-radius: .6rem;
+	p{color: rgba(42,42,57,.82)}
+	strong{
+		font-weight: $font-regular;
+		color: rgb(36,36,48);
+	}
 }
 
 
 
 // Lists
-article,.typography{
+article,{
 	ul,ol{
 		margin: 				$space;
 		ul,ol{
@@ -223,5 +231,9 @@ article,.typography{
 	h4 {
 		font-size: 				2.1rem;
 		line-height: 			3.3rem;
+	}
+	blockquote{
+		border-radius: 0;
+		padding: 1.8rem;
 	}
 }
